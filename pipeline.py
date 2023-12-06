@@ -25,7 +25,7 @@ def transform(input_data):
     input_data["Date"] = pd.to_datetime(input_data["Date"], format="%Y-%m-%d")
     input_data["Month"] = input_data["Date"].dt.month
     
-    # Filter out rows with "Weekly_Sales" less than or equal to 10000
+    # Filter out rows with "Weekly_Sales" less than 10000
     input_data = input_data[input_data["Weekly_Sales"] > 10000]
     
     # Select specific columns for further analysis
